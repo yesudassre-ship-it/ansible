@@ -1,0 +1,5 @@
+# Ansible and system ignores
+.ansible/
+*.retry
+*.zip
+.DS_Store

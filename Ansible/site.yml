@@ -2,6 +2,7 @@
 - name: print facts
   hosts: localhost
   connection: local
+  gather_facts: no
   tasks:
     - name: print the facts
       debug:

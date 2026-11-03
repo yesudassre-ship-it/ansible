@@ -1,8 +1,9 @@
 ---
-  - name: print facts 
-    host: localhost
-    connection: localhost
-    tasks:
+- name: print facts
+  hosts: localhost
+  connection: local
+  gather_facts: yes
+  tasks:
     - name: print the facts
       debug:
-        msg: "{{ ansible_facts }}"  
+        msg: "{{ ansible_facts }}"        

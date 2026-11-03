@@ -2,7 +2,7 @@
 - name: print facts
   hosts: localhost
   connection: local
-  gather_facts: no
+  gather_facts: yes
   tasks:
     - name: print the facts
       debug:
@@ -10,4 +10,5 @@
   tasks:
     - name: print the ip 
       debug:
-        msg: "{{ ansible_facts.['all_ipv4_addresses'] }}"
+        msg: {{ ansible_facts.['all_ipv4_addresses'] }}
+        msg: {{ ansible_facts.all_ipv4_addresses }}

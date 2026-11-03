@@ -10,5 +10,5 @@
   tasks:
     - name: print the ip 
       debug:
-        msg: {{ ansible_facts.['all_ipv4_addresses'] }}
+        msg: {{ ansible_facts['all_ipv4_addresses'] }}
         msg: {{ ansible_facts.all_ipv4_addresses }}

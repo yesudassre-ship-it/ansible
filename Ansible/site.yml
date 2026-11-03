@@ -10,4 +10,4 @@
   tasks:
     - name: print the ip 
       debug:
-        msg: "{{ "all_ipv4_addresses" }}"
+        msg: "{{ all_ipv4_addresses }}"

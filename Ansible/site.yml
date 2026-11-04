@@ -20,6 +20,7 @@
       - git
       - net-tools
       - htop
+    tasks:  
     - name: install packages
       package: 
         name: "{{ item }}"

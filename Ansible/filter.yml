@@ -1,0 +1,9 @@
+---
+- name: demo of filter 
+  hosts: localhost
+  connect: local
+  become: yes
+  tasks:
+   debug:
+     msg: "Hi, {{ person_name | default(5) }}"
+  

@@ -20,9 +20,8 @@
         - git
         - net-tools
         - htop
-  tasks:
     -name: install packages
-    packages: 
+     packages: 
          name: "{{ item }}"
          state: present
          loop: "{{ packages }}"	        

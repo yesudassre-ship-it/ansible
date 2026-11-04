@@ -14,7 +14,7 @@
             "{{ ansible_facts.all_ipv4_addresses }}"
             "{{ ansible_facts['bios_vendor'] }}"
   vars: 
-	packages: 
+    packages: 
 		- ngnix
 		- mysql
 		- git

@@ -3,6 +3,7 @@
   hosts: localhost
   connection: local
   gather_facts: yes
+  become: yes 
   tasks:
     - name: print the facts
       debug:
@@ -12,4 +13,16 @@
         msg: |
             "{{ ansible_facts.all_ipv4_addresses }}"
             "{{ ansible_facts['bios_vendor'] }}"
-        
+  vars: 
+	packages: 
+		- ngnix
+		- mysql
+		- git
+		- net-tools
+		- htop
+  tasks:
+	-name: install packages
+		packages: 
+			name: "{{ item }}"
+			state: present
+		loop: "{{ packages }}"	        

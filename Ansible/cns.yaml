@@ -11,3 +11,9 @@
     - name: print the output
       debug: 
         msg: "{{ ec2_user_output }}"
+    - name : get the files 
+      shell: ls -ltr > /tmp/txt.txt
+      register: files_output
+    - name: print the file 
+        debug:
+            msg: "{{ files_output }}"        

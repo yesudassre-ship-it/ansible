@@ -1,5 +1,5 @@
 ---
-- name: print facts
+- name: take facts & install pakges
   hosts: localhost
   connection: local
   gather_facts: yes

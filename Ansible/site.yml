@@ -14,14 +14,14 @@
             "{{ ansible_facts.all_ipv4_addresses }}"
             "{{ ansible_facts['bios_vendor'] }}"
   vars: 
-    package: 
-        - ngnix
-        - mysql
-        - git
-        - net-tools
-        - htop
-    -name: install package
-     package: 
-         name: "{{ item }}"
-         state: present
-         loop: "{{ package }}"	        
+    packages: 
+      - ngnix
+      - mysql
+      - git
+      - net-tools
+      - htop
+    -name: install packages
+     packages: 
+        name: "{{ item }}"
+        state: present
+        loop: "{{ packages }}"	        

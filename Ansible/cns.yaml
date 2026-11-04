@@ -12,7 +12,7 @@
       debug: 
         msg: "{{ ec2_user_output }}"
     - name : get the files 
-      shell: ls - la > /tmp/txt.txt
+      shell: ls > /tmp/txt.txt
       register: files_output
     - name: print the file 
       debug:

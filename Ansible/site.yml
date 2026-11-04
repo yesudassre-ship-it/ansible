@@ -5,14 +5,14 @@
   gather_facts: yes
   become: yes 
   tasks:
-    - name: print the facts
-      debug:
-        msg: "{{ ansible_facts }}"        
-    - name: print the ip 
-      debug:
-        msg: |
-            "{{ ansible_facts.all_ipv4_addresses }}"
-            "{{ ansible_facts['bios_vendor'] }}"
+    # - name: print the facts
+      # debug:
+        # msg: "{{ ansible_facts }}"        
+    # - name: print the ip 
+      # debug:
+        # msg: |
+            # "{{ ansible_facts.all_ipv4_addresses }}"
+            # "{{ ansible_facts['bios_vendor'] }}"
   vars: 
     packages: 
       - ngnix
@@ -20,8 +20,8 @@
       - git
       - net-tools
       - htop
-    -name: install packages
-     package: 
+    - name: install packages
+      package: 
         name: "{{ item }}"
         state: present
         loop: "{{ packages }}"	        

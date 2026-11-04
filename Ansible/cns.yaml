@@ -6,7 +6,7 @@
   tasks: 
     - name: test the commands module
       # command: cat /etc/passwd | grep ec2-user
-      sheel: cat /etc/passwd | grep ec2-user
+      shell: cat /etc/passwd | grep ec2-user
       register: ec2-user_output
     - name: print the output
       debug: 

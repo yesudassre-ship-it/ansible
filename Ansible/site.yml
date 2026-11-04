@@ -15,14 +15,13 @@
             # "{{ ansible_facts['bios_vendor'] }}"
   vars:
     packages:
-      - ngnix
-      - mysql
-      - git
-      - net-tools
-      - htop
+      - { name: 'ngnix' state: 'present' }
+      - { name: 'mysql' state: 'absent' }
+      - { name: 'git' state: 'absent' }
+      - { name: 'net-tools' state: 'absent' }
+      - { name: 'htop' state: 'absent' }
   tasks:
     - name: install packages
       package:
-        name: "{{ item }}"
-        state: present
+        name: "{{ name }}"
       loop: "{{ packages }}"

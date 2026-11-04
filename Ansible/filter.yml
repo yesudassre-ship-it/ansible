@@ -1,7 +1,7 @@
 ---
 - name: demo of filter 
   hosts: localhost
-  connect: local
+  connection: local
   become: yes
   tasks:
    debug:

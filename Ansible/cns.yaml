@@ -10,4 +10,4 @@
       register: ec2_user_output
     - name: print the output
       debug: 
-        msg: "{{ ec2-user_output }}"
+        msg: "{{ ec2_user_output }}"

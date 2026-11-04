@@ -5,5 +5,5 @@
   become: yes
   tasks:
    debug:
-     msg: "Hi, {{ person_name | default(5) }}"
+     msg: "Hi, {{ person_name | default('5') }}"
   
